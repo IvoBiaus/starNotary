@@ -2,6 +2,23 @@
 
 **PROJECT: Decentralized Star Notary Service Project** - For this project, you will create a DApp by adding functionality with your smart contract and deploy it on the public testnet.
 
+#### ERC-721 Token Name
+
+Stella
+
+#### ERC-721 Token Symbol
+
+STL
+
+#### Version of the Truffle and OpenZeppelin used
+
+Truffle v5.5.28
+Openzeppelin (@openzeppelin/contracts) v4.7.3
+
+#### Token Address on the Rinkeby Network
+
+0x2eBa4171426E3e5e3feb4c8Efb7Dd7f7745683B2
+
 ### ToDo
 
 This Starter Code has already implemented the functionalities you implemented in the StarNotary (Version 2) exercise, and have comments in all the files you need to implement your tasks.

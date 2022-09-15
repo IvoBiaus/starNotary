@@ -22,11 +22,9 @@
  *
  */
 
-// const HDWallet = require('truffle-hdwallet-provider');
-// const infuraKey = "fj4jll3k.....";
-//
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+const infuraKey = "SECRET";
+const mnemonic = "SECRET";
 
 module.exports = {
   /**
@@ -47,9 +45,18 @@ module.exports = {
     // options below to some value.
     //
     development: {
-      host: "172.24.208.1",
-      port: 7545,
+      host: "127.0.0.1", // Localhost (default: none)
+      port: 9545,
       network_id: "*", // Any network (default: none)
+    },
+    rinkeby: {
+      provider: function () {
+        return new HDWalletProvider(
+          mnemonic,
+          `https://rinkeby.infura.io/v3/${infuraKey}`
+        );
+      },
+      network_id: "4",
     },
 
     // Another network with more advanced options...
@@ -83,7 +90,7 @@ module.exports = {
 
   // Set default mocha options here, use special reporters etc.
   mocha: {
-    // timeout: 100000
+    timeout: 5000,
   },
 
   // Configure your compilers
